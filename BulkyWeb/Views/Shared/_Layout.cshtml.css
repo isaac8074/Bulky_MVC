@@ -7,9 +7,9 @@ a.navbar-brand {
   word-break: break-all;
 }
 
-a {
+/*a {
   color: #0077cc;
-}
+}*/
 
 .btn-primary {
   color: #fff;
@@ -46,4 +46,3 @@ button.accept-policy {
   white-space: nowrap;
   line-height: 60px;
 }
-

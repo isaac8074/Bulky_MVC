@@ -15,11 +15,29 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="7.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Facebook" Version="7.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.MicrosoftAccount" Version="7.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="7.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.10" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="Data\" />
+    <Content Remove="Views\Category\index.cshtml" />
+    <Content Remove="Properties\ServiceDependencies\dotnetmastery-bulky - Web Deploy\profile.arm.json" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Data\" />
+    <ProjectReference Include="..\Bulky.DataAccess\Bulky.DataAccess.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".config\" />
+    <Folder Include="Views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".config\dotnet-tools.json" />
   </ItemGroup>
 </Project>
